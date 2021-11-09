@@ -1,0 +1,72 @@
+<div class="p-4 text-center text-dark" id="crosswordPuzzle">
+    <!-- ROW 1 -->
+    <div class="row bg-light">
+        <div class="col border border-dark py-3 bg-dark text-dark">0</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue1'|f3 == true %}S{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark"></div>
+        <div class="col border border-dark py-3">{% if ('SESSION.clue2'|f3 == true) or ('SESSION.clue8'|f3 == true) %}W{% endif %}</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue2'|f3 == true %}E{% endif %}</div>
+        <div class="col border border-dark py-3">{% if ('SESSION.clue2'|f3 == true) or ('SESSION.clue3'|f3 == true) %}A{% endif %}</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue2'|f3 == true %}K{% endif %}</div>
+    </div>
+    <!-- ROW 2 -->
+    <div class="row bg-light">
+        <div class="col border border-dark py-3">{% if 'SESSION.clue4'|f3 == true %}B{% endif %}</div>
+        <div class="col border border-dark py-3">{% if ('SESSION.clue4'|f3 == true) or ('SESSION.clue1'|f3 == true) %}L{% endif %}</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue4'|f3 == true %}U{% endif %}</div>
+        <div class="col border border-dark py-3">{% if ('SESSION.clue4'|f3 == true) or ('SESSION.clue8'|f3 == true) %}E{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark text-dark">0</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue3'|f3 == true %}D{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark"></div>
+    </div>
+    <!-- ROW 3 -->
+    <div class="row bg-light">
+        <div class="col border border-dark py-3 bg-dark text-dark">0</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue1'|f3 == true %}I{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark"></div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue8'|f3 == true %}D{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark"></div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue3'|f3 == true %}D{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark"></div>
+    </div>
+    <!-- ROW 4 -->
+    <div class="row bg-light">
+        <div class="col border border-dark py-3 {% if 'SESSION.clue5'|f3 != true %}text-light{% endif %}">{% if 'SESSION.clue5'|f3 == true %}S{% else %}0{% endif %}</div>
+        <div class="col border border-dark py-3">{% if ('SESSION.clue5'|f3 == true) or ('SESSION.clue1'|f3 == true) %}P{% endif %}</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue5'|f3 == true %}I{% endif %}</div>
+        <div class="col border border-dark py-3">{% if ('SESSION.clue5'|f3 == true) or ('SESSION.clue8'|f3 == true) %}D{% endif %}</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue5'|f3 == true %}E{% endif %}</div>
+        <div class="col border border-dark py-3">{% if ('SESSION.clue5'|f3 == true) or ('SESSION.clue3'|f3 == true) %}R{% endif %}</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue5'|f3 == true %}S{% endif %}</div>    
+    </div>
+    <!-- ROW 5 -->
+    <div class="row bg-light">
+        <div class="col border border-dark py-3 bg-dark text-dark">0</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue1'|f3 == true %}P{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark"></div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue8'|f3 == true %}I{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark"></div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue3'|f3 == true %}E{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark"></div>
+    </div>
+    <!-- ROW 6 -->
+    <div class="row bg-light">
+        <div class="col border border-dark py-3 bg-dark text-dark">0</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue1'|f3 == true %}E{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark"></div>
+        <div class="col border border-dark py-3">{% if ('SESSION.clue6'|f3 == true) or ('SESSION.clue8'|f3 == true) %}N{% endif %}</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue6'|f3 == true %}E{% endif %}</div>
+        <div class="col border border-dark py-3">{% if ('SESSION.clue6'|f3 == true) or ('SESSION.clue3'|f3 == true) %}S{% endif %}</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue6'|f3 == true %}T{% endif %}</div>
+    </div>
+    <!-- ROW 7 -->
+    <div class="row bg-light">
+        <div class="col border border-dark py-3">{% if 'SESSION.clue7'|f3 == true %}F{% endif %}</div>
+        <div class="col border border-dark py-3">{% if ('SESSION.clue1'|f3 == true) or ('SESSION.clue7'|f3 == true) %}R{% endif %}</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue7'|f3 == true %}O{% endif %}</div>
+        <div class="col border border-dark py-3">{% if ('SESSION.clue8'|f3 == true) or ('SESSION.clue7'|f3 == true) %}G{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark text-dark">0</div>
+        <div class="col border border-dark py-3">{% if 'SESSION.clue3'|f3 == true %}S{% endif %}</div>
+        <div class="col border border-dark py-3 bg-dark"></div>
+    </div>
+</div>

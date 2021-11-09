@@ -1,0 +1,60 @@
+{% extends "base/base.twig" %}
+
+{% block page_title %}Crossword - {{ parent() }}{% endblock %}
+
+{% block page_description %}Crossword{% endblock %}
+
+{% block content %}
+
+<div class="col-12 py-3 text-light">
+    <h3>Crossword</h3>
+</div>
+<div class="col-12">
+    <div class="row">
+        <div class="col-12 col-md-6 p-2">
+            {% include 'crossword/playing_board.twig' %}
+        </div>
+        <div class="col-12 col-md-6 px-2 pl-5">
+            {% block dynamic_crossword %}
+                <!-- ACROSS clues -->
+                <h5 class="text-light">ACROSS</h5>
+                <div class="list-group text-dark">
+                    {% for clue in clues %}
+                        {% set answered = 'SESSION.clue'~''~clue.id %}
+                        {% if clue.direction == "a" %}
+                            <a href="puzzles/crossword/{{ clue.id }}" class="list-group-item list-group-item-action bg-light 
+                                {% if ('SESSION.loggedIn'|f3 != true) or (answered|f3 == true) %}
+                                    disabled
+                                {% endif %}
+                            "> {{ clue.start_pos }}. {{ clue.clue|replace({'_':'_____'}) }} ({{ clue.answer|length }})
+                                {% if answered|f3 == true %}
+                                    <i class="fas fa-check"></i>
+                                {% endif %}
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <!-- DOWN clues -->
+                <h5 class="text-light pt-3">DOWN</h5>
+                <div class="list-group text-dark">
+                    {% for clue in clues %}
+                        {% set answered = 'SESSION.clue'~''~clue.id %}
+                        {% if clue.direction == "d" %}
+                            <a href="puzzles/crossword/{{ clue.id }}" class="list-group-item list-group-item-action bg-light 
+                                {% if ('SESSION.loggedIn'|f3 != true) or (answered|f3 == true) %}
+                                    disabled
+                                {% endif %}
+                            "> {{ clue.start_pos }}. {{ clue.clue|replace({'_':'_____'}) }} ({{ clue.answer|length }})
+                                {% if answered|f3 == true %}
+                                    <i class="fas fa-check"></i>
+                                {% endif %}
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

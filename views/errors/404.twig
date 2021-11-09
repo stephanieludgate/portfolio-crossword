@@ -1,0 +1,15 @@
+{% extends "base/base.twig" %}
+
+{% block page_title %}Uh Oh - {{ parent() }}{% endblock %}
+
+{% block page_description %}Error{% endblock %}
+
+{% block content %}
+
+<div class="col-12 py-5 text-light text-center">
+    <h3>404 ERROR</h3>
+    <br>
+    <p>Uh Oh! This page cannot be found</p>
+</div>
+
+{% endblock %}

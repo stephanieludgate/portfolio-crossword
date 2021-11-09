@@ -1,0 +1,37 @@
+{% extends "base/base.twig" %}
+
+{% block page_title %}Scoreboard - {{ parent() }}{% endblock %}
+
+{% block page_description %}Scores{% endblock %}
+
+{% block content %}
+
+<div class="col-12 py-3 text-light">
+    <h3>Scoreboard</h3>
+</div>
+<div class="col-12 col-sm-8">
+    <table class="table text-light text-center">
+        <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>USER</th>
+                <th>SCORE</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for score in scores %}
+                <tr
+                    {% set currentUser = 'SESSION.username'|f3 %}
+                    {% if currentUser == score.username %} class="text-success"{% endif %}>
+                    <td>{{loop.index}}</td>
+                    <td>{{score.username}}</td>
+                    {% set scoreMinutes = score.score//60 %}
+                    {% set scoreSeconds = score.score%60 %}
+                    <td>{{ '%02d'|format(scoreMinutes) }}:{{ '%02d'|format(scoreSeconds) }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base/base.twig" %}
+
+{% block page_title %}User List - {{ parent() }}{% endblock %}
+
+{% block page_description %}List of Users{% endblock %}
+
+{% block content %}
+
+<div class="col-12 py-3 text-light">
+    <h3>List of Users<a class="btn btn-light float-right" href="print">PRINT</a></h3>
+</div>
+<div class="col-12 text-dark">
+    <div class="row">
+        <div class="col-12">
+            <table class="table text-light text-center">
+                <thead class="thead-light">
+                    <tr>
+                        <th>ID</th>
+                        <th>EMAIL</th>
+                        <th>USERNAME</th>
+                        <th>DATE JOINED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{user.id}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.username}}</td>
+                            <td>{{user.member_since|date("m/d/Y")}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

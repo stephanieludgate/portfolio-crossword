@@ -1,0 +1,18 @@
+{% extends "base/base.twig" %}
+
+{% block page_title %}Account - {{ parent() }}{% endblock %}
+
+{% block page_description %}Account Details{% endblock %}
+
+{% block content %}
+    <div class="card col-6 offset-3 my-5 p-4 bg-light text-dark">
+        <img class="card-img-top" src="https://picsum.photos/500/325?random={{ user.id }}" alt="">
+        <div class="card-body">
+            <h5 class="card-title">Username: {{ user.username }}</h5>
+            <h5>Email: {{ user.email }}</h5>
+            <p class="card-text">Just a simple card to view for now.</p>
+            <a href="puzzles" class="btn btn-primary">Return to Puzzles</a>
+        </div>
+    </div>
+
+{% endblock %}
