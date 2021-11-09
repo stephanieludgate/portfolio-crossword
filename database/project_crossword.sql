@@ -43,12 +43,12 @@ CREATE TABLE `project_crossword` (
 INSERT INTO `project_crossword` (`id`, `start_pos`, `direction`, `clue`, `answer`) VALUES
 (1, 1, 'd', 'A soft, comfortable kind of shoe worn indoors', 'slipper'),
 (2, 2, 'a', 'The opposite of strong', 'weak'),
-(3, 3, 'd', 'Write someone\'s name and _ on an envelope', 'address'),
-(4, 4, 'a', 'A sky colour', 'blue'),
-(5, 5, 'a', 'Creatures that make webs to catch insects', 'spiders'),
-(6, 6, 'a', 'A bird builds this', 'nest'),
-(7, 7, 'a', 'A green animal that croaks', 'frog'),
-(8, 2, 'd', 'The time when two people get married', 'wedding');
+(3, 2, 'd', 'The time when two people get married', 'wedding'),
+(4, 3, 'd', 'Write someone\'s name and _ on an envelope', 'address'),
+(5, 4, 'a', 'A sky colour', 'blue'),
+(6, 5, 'a', 'Creatures that make webs to catch insects', 'spiders'),
+(7, 6, 'a', 'A bird builds this', 'nest'),
+(8, 7, 'a', 'A green animal that croaks', 'frog');
 
 --
 -- Indexes for dumped tables
